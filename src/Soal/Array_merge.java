@@ -1,15 +1,20 @@
 package Soal;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Array_merge {
     public static void arrayMerge(){
-        String[] firstArray = {"kazuya","jin","lee"};
-        String[] secondArray = {"kazuya","feng"};
-        System.out.println(Arrays.toString(firstArray));
-        System.out.println(Arrays.toString(secondArray));
+        System.out.println("masukkan 2 array (contoh: kazuya,jin,lee): ");
+        Scanner scan = new Scanner(System.in);
+        String a = scan.nextLine();
+        String[] firstArray = a.split(",");
+        String b = scan.nextLine();
+        String[] secondArray = b.split(",");
+
+        //String[] firstArray = {"kazuya","jin","lee"};
+        //String[] secondArray = {"kazuya","feng"};
 
         String[] input = new String[firstArray.length +secondArray.length];
         System.arraycopy(firstArray,0,input,0,firstArray.length);
